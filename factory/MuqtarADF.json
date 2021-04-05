@@ -1,0 +1,9 @@
+{
+	"name": "MuqtarADF",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "586f298e-20bb-4845-9120-2a0ccace7824",
+		"tenantId": "3decfc18-2cba-41dd-b672-e4521c51eb4d"
+	}
+}
