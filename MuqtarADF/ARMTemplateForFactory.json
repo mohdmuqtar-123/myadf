@@ -69,7 +69,6 @@
 						"typeProperties": {
 							"source": {
 								"type": "SqlServerSource",
-								"sqlReaderQuery": "select Distinct Name,DepartmentID from HumanResources.Department;",
 								"queryTimeout": "02:00:00",
 								"partitionOption": "None"
 							},
@@ -95,7 +94,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"items": {
-								"value": "@activity('Lookup1').output",
+								"value": "@activity('Copy data1').output",
 								"type": "Expression"
 							},
 							"activities": [
@@ -512,7 +511,10 @@
 				"annotations": [],
 				"type": "SqlServerTable",
 				"schema": [],
-				"typeProperties": {}
+				"typeProperties": {
+					"schema": "HumanResources",
+					"table": "Department"
+				}
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/SqlServer1')]"
