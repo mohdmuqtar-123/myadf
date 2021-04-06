@@ -11,9 +11,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageLS'"
 		},
+		"AzureDemoDBLSNew_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureDemoDBLSNew'"
+		},
 		"AzureSqlDatabase_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase'"
+		},
+		"AzureSqlDatabaseLSNew_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLSNew'"
 		},
 		"AzureSqlDemoDBL_connectionString": {
 			"type": "secureString",
@@ -73,8 +81,14 @@
 					"AzureBlobStorageLS_connectionString": {
 						"value": "[parameters('AzureBlobStorageLS_connectionString')]"
 					},
+					"AzureDemoDBLSNew_connectionString": {
+						"value": "[parameters('AzureDemoDBLSNew_connectionString')]"
+					},
 					"AzureSqlDatabase_connectionString": {
 						"value": "[parameters('AzureSqlDatabase_connectionString')]"
+					},
+					"AzureSqlDatabaseLSNew_connectionString": {
+						"value": "[parameters('AzureSqlDatabaseLSNew_connectionString')]"
 					},
 					"AzureSqlDemoDBL_connectionString": {
 						"value": "[parameters('AzureSqlDemoDBL_connectionString')]"
@@ -100,6 +114,26 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "MuqtarADF_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'MuqtarADF_ArmTemplate_0')]"
+			]
 		}
 	]
 }

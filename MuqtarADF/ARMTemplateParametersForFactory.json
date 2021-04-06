@@ -8,7 +8,13 @@
 		"AzureBlobStorageLS_connectionString": {
 			"value": ""
 		},
+		"AzureDemoDBLSNew_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabase_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLSNew_connectionString": {
 			"value": ""
 		},
 		"AzureSqlDemoDBL_connectionString": {
