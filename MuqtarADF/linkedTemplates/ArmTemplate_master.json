@@ -35,6 +35,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDemoDBL'"
 		},
+		"OnPremiseDBLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'OnPremiseDBLS'"
+		},
+		"OnPremiseDBLS_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'OnPremiseDBLS'"
+		},
 		"SqlServer1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
@@ -50,6 +58,10 @@
 		"SqlServerLS_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServerLS'"
+		},
+		"OnPremiseDBLS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "mohammed's"
 		},
 		"SqlServer1_properties_typeProperties_userName": {
 			"type": "string",
@@ -107,6 +119,12 @@
 					"AzureSqlDemoDBL_connectionString": {
 						"value": "[parameters('AzureSqlDemoDBL_connectionString')]"
 					},
+					"OnPremiseDBLS_connectionString": {
+						"value": "[parameters('OnPremiseDBLS_connectionString')]"
+					},
+					"OnPremiseDBLS_password": {
+						"value": "[parameters('OnPremiseDBLS_password')]"
+					},
 					"SqlServer1_connectionString": {
 						"value": "[parameters('SqlServer1_connectionString')]"
 					},
@@ -118,6 +136,9 @@
 					},
 					"SqlServerLS_password": {
 						"value": "[parameters('SqlServerLS_password')]"
+					},
+					"OnPremiseDBLS_properties_typeProperties_userName": {
+						"value": "[parameters('OnPremiseDBLS_properties_typeProperties_userName')]"
 					},
 					"SqlServer1_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"

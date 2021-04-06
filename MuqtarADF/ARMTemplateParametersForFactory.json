@@ -26,6 +26,12 @@
 		"AzureSqlDemoDBL_connectionString": {
 			"value": ""
 		},
+		"OnPremiseDBLS_connectionString": {
+			"value": ""
+		},
+		"OnPremiseDBLS_password": {
+			"value": ""
+		},
 		"SqlServer1_connectionString": {
 			"value": ""
 		},
@@ -37,6 +43,9 @@
 		},
 		"SqlServerLS_password": {
 			"value": ""
+		},
+		"OnPremiseDBLS_properties_typeProperties_userName": {
+			"value": "mohammed's"
 		},
 		"SqlServer1_properties_typeProperties_userName": {
 			"value": "mohammed's"
