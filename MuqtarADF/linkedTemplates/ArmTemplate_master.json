@@ -59,6 +59,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServerLS'"
 		},
+		"AzureADLGen1LS_servicePrincipalKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'servicePrincipalKey' of 'AzureADLGen1LS'"
+		},
 		"OnPremiseDBLS_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "mohammed's"
@@ -70,6 +74,26 @@
 		"SqlServerLS_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "mohammed's"
+		},
+		"AzureADLGen1LS_properties_typeProperties_dataLakeStoreUri": {
+			"type": "string",
+			"defaultValue": "https://muqtaradlgen1.azuredatalakestore.net/webhdfs/v1"
+		},
+		"AzureADLGen1LS_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "754a8cb5-c7ae-4ad2-89b9-b50cfc9ce919"
+		},
+		"AzureADLGen1LS_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "3decfc18-2cba-41dd-b672-e4521c51eb4d"
+		},
+		"AzureADLGen1LS_properties_typeProperties_subscriptionId": {
+			"type": "string",
+			"defaultValue": "c9ae7185-bbdf-4646-b5a6-475dbb540912"
+		},
+		"AzureADLGen1LS_properties_typeProperties_resourceGroupName": {
+			"type": "string",
+			"defaultValue": "MuqtarRG"
 		},
 		"containerUri": {
 			"type": "string",
@@ -119,6 +143,9 @@
 					"AzureSqlDemoDBL_connectionString": {
 						"value": "[parameters('AzureSqlDemoDBL_connectionString')]"
 					},
+					"AzureADLGen1LS_servicePrincipalKey": {
+						"value": "[parameters('AzureADLGen1LS_servicePrincipalKey')]"
+					},
 					"OnPremiseDBLS_connectionString": {
 						"value": "[parameters('OnPremiseDBLS_connectionString')]"
 					},
@@ -131,20 +158,26 @@
 					"SqlServer1_password": {
 						"value": "[parameters('SqlServer1_password')]"
 					},
-					"SqlServerLS_connectionString": {
-						"value": "[parameters('SqlServerLS_connectionString')]"
+					"AzureADLGen1LS_properties_typeProperties_dataLakeStoreUri": {
+						"value": "[parameters('AzureADLGen1LS_properties_typeProperties_dataLakeStoreUri')]"
 					},
-					"SqlServerLS_password": {
-						"value": "[parameters('SqlServerLS_password')]"
+					"AzureADLGen1LS_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('AzureADLGen1LS_properties_typeProperties_servicePrincipalId')]"
+					},
+					"AzureADLGen1LS_properties_typeProperties_tenant": {
+						"value": "[parameters('AzureADLGen1LS_properties_typeProperties_tenant')]"
+					},
+					"AzureADLGen1LS_properties_typeProperties_subscriptionId": {
+						"value": "[parameters('AzureADLGen1LS_properties_typeProperties_subscriptionId')]"
+					},
+					"AzureADLGen1LS_properties_typeProperties_resourceGroupName": {
+						"value": "[parameters('AzureADLGen1LS_properties_typeProperties_resourceGroupName')]"
 					},
 					"OnPremiseDBLS_properties_typeProperties_userName": {
 						"value": "[parameters('OnPremiseDBLS_properties_typeProperties_userName')]"
 					},
 					"SqlServer1_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
-					},
-					"SqlServerLS_properties_typeProperties_userName": {
-						"value": "[parameters('SqlServerLS_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -163,6 +196,15 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"SqlServerLS_connectionString": {
+						"value": "[parameters('SqlServerLS_connectionString')]"
+					},
+					"SqlServerLS_password": {
+						"value": "[parameters('SqlServerLS_password')]"
+					},
+					"SqlServerLS_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServerLS_properties_typeProperties_userName')]"
 					}
 				}
 			},

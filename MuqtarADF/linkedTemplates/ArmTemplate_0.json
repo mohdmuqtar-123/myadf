@@ -35,6 +35,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDemoDBL'"
 		},
+		"AzureADLGen1LS_servicePrincipalKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'servicePrincipalKey' of 'AzureADLGen1LS'"
+		},
 		"OnPremiseDBLS_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'OnPremiseDBLS'"
@@ -51,23 +55,31 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer1'"
 		},
-		"SqlServerLS_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'SqlServerLS'"
+		"AzureADLGen1LS_properties_typeProperties_dataLakeStoreUri": {
+			"type": "string",
+			"defaultValue": "https://muqtaradlgen1.azuredatalakestore.net/webhdfs/v1"
 		},
-		"SqlServerLS_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'SqlServerLS'"
+		"AzureADLGen1LS_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "754a8cb5-c7ae-4ad2-89b9-b50cfc9ce919"
+		},
+		"AzureADLGen1LS_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "3decfc18-2cba-41dd-b672-e4521c51eb4d"
+		},
+		"AzureADLGen1LS_properties_typeProperties_subscriptionId": {
+			"type": "string",
+			"defaultValue": "c9ae7185-bbdf-4646-b5a6-475dbb540912"
+		},
+		"AzureADLGen1LS_properties_typeProperties_resourceGroupName": {
+			"type": "string",
+			"defaultValue": "MuqtarRG"
 		},
 		"OnPremiseDBLS_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "mohammed's"
 		},
 		"SqlServer1_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "mohammed's"
-		},
-		"SqlServerLS_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "mohammed's"
 		}
@@ -174,6 +186,27 @@
 			"properties": {
 				"type": "SelfHosted",
 				"typeProperties": {}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureADLGen1LS')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDataLakeStore",
+				"typeProperties": {
+					"dataLakeStoreUri": "[parameters('AzureADLGen1LS_properties_typeProperties_dataLakeStoreUri')]",
+					"servicePrincipalId": "[parameters('AzureADLGen1LS_properties_typeProperties_servicePrincipalId')]",
+					"servicePrincipalKey": {
+						"type": "SecureString",
+						"value": "[parameters('AzureADLGen1LS_servicePrincipalKey')]"
+					},
+					"tenant": "[parameters('AzureADLGen1LS_properties_typeProperties_tenant')]",
+					"subscriptionId": "[parameters('AzureADLGen1LS_properties_typeProperties_subscriptionId')]",
+					"resourceGroupName": "[parameters('AzureADLGen1LS_properties_typeProperties_resourceGroupName')]"
+				}
 			},
 			"dependsOn": []
 		},
@@ -665,30 +698,6 @@
 					"password": {
 						"type": "SecureString",
 						"value": "[parameters('SqlServer1_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "integrationRuntime",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SqlServerLS')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"connectionString": "[parameters('SqlServerLS_connectionString')]",
-					"userName": "[parameters('SqlServerLS_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('SqlServerLS_password')]"
 					}
 				},
 				"connectVia": {

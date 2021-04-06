@@ -44,6 +44,9 @@
 		"SqlServerLS_password": {
 			"value": ""
 		},
+		"AzureADLGen1LS_servicePrincipalKey": {
+			"value": ""
+		},
 		"OnPremiseDBLS_properties_typeProperties_userName": {
 			"value": "mohammed's"
 		},
@@ -52,6 +55,21 @@
 		},
 		"SqlServerLS_properties_typeProperties_userName": {
 			"value": "mohammed's"
+		},
+		"AzureADLGen1LS_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://muqtaradlgen1.azuredatalakestore.net/webhdfs/v1"
+		},
+		"AzureADLGen1LS_properties_typeProperties_servicePrincipalId": {
+			"value": "754a8cb5-c7ae-4ad2-89b9-b50cfc9ce919"
+		},
+		"AzureADLGen1LS_properties_typeProperties_tenant": {
+			"value": "3decfc18-2cba-41dd-b672-e4521c51eb4d"
+		},
+		"AzureADLGen1LS_properties_typeProperties_subscriptionId": {
+			"value": "c9ae7185-bbdf-4646-b5a6-475dbb540912"
+		},
+		"AzureADLGen1LS_properties_typeProperties_resourceGroupName": {
+			"value": "MuqtarRG"
 		},
 		"containerUri": {
 			"value": ""
