@@ -15,6 +15,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureDemoDBLSNew'"
 		},
+		"AzureDempDBDimProduct_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureDempDBDimProduct'"
+		},
+		"AzureSampleDBProductTableLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSampleDBProductTableLS'"
+		},
 		"AzureSqlDatabase_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase'"
@@ -42,14 +50,6 @@
 		"SqlServerLS_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServerLS'"
-		},
-		"AzureSampleDBProductTableLS_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSampleDBProductTableLS'"
-		},
-		"AzureDempDBDimProduct_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureDempDBDimProduct'"
 		},
 		"SqlServer1_properties_typeProperties_userName": {
 			"type": "string",
@@ -92,6 +92,12 @@
 					"AzureDemoDBLSNew_connectionString": {
 						"value": "[parameters('AzureDemoDBLSNew_connectionString')]"
 					},
+					"AzureDempDBDimProduct_connectionString": {
+						"value": "[parameters('AzureDempDBDimProduct_connectionString')]"
+					},
+					"AzureSampleDBProductTableLS_connectionString": {
+						"value": "[parameters('AzureSampleDBProductTableLS_connectionString')]"
+					},
 					"AzureSqlDatabase_connectionString": {
 						"value": "[parameters('AzureSqlDatabase_connectionString')]"
 					},
@@ -100,12 +106,6 @@
 					},
 					"AzureSqlDemoDBL_connectionString": {
 						"value": "[parameters('AzureSqlDemoDBL_connectionString')]"
-					},
-					"AzureSampleDBProductTableLS_connectionString": {
-						"value": "[parameters('AzureSampleDBProductTableLS_connectionString')]"
-					},
-					"AzureDempDBDimProduct_connectionString": {
-						"value": "[parameters('AzureDempDBDimProduct_connectionString')]"
 					},
 					"SqlServer1_connectionString": {
 						"value": "[parameters('SqlServer1_connectionString')]"
