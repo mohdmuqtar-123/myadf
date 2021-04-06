@@ -63,6 +63,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'servicePrincipalKey' of 'AzureADLGen1LS'"
 		},
+		"SQLConditionalFileSeperatorLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SQLConditionalFileSeperatorLS'"
+		},
+		"AzureBlobStorageCSV_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageCSV'"
+		},
 		"OnPremiseDBLS_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "mohammed's"
@@ -146,17 +154,11 @@
 					"AzureADLGen1LS_servicePrincipalKey": {
 						"value": "[parameters('AzureADLGen1LS_servicePrincipalKey')]"
 					},
-					"OnPremiseDBLS_connectionString": {
-						"value": "[parameters('OnPremiseDBLS_connectionString')]"
+					"SQLConditionalFileSeperatorLS_connectionString": {
+						"value": "[parameters('SQLConditionalFileSeperatorLS_connectionString')]"
 					},
-					"OnPremiseDBLS_password": {
-						"value": "[parameters('OnPremiseDBLS_password')]"
-					},
-					"SqlServer1_connectionString": {
-						"value": "[parameters('SqlServer1_connectionString')]"
-					},
-					"SqlServer1_password": {
-						"value": "[parameters('SqlServer1_password')]"
+					"AzureBlobStorageCSV_connectionString": {
+						"value": "[parameters('AzureBlobStorageCSV_connectionString')]"
 					},
 					"AzureADLGen1LS_properties_typeProperties_dataLakeStoreUri": {
 						"value": "[parameters('AzureADLGen1LS_properties_typeProperties_dataLakeStoreUri')]"
@@ -172,12 +174,6 @@
 					},
 					"AzureADLGen1LS_properties_typeProperties_resourceGroupName": {
 						"value": "[parameters('AzureADLGen1LS_properties_typeProperties_resourceGroupName')]"
-					},
-					"OnPremiseDBLS_properties_typeProperties_userName": {
-						"value": "[parameters('OnPremiseDBLS_properties_typeProperties_userName')]"
-					},
-					"SqlServer1_properties_typeProperties_userName": {
-						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -197,11 +193,29 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"OnPremiseDBLS_connectionString": {
+						"value": "[parameters('OnPremiseDBLS_connectionString')]"
+					},
+					"OnPremiseDBLS_password": {
+						"value": "[parameters('OnPremiseDBLS_password')]"
+					},
+					"SqlServer1_connectionString": {
+						"value": "[parameters('SqlServer1_connectionString')]"
+					},
+					"SqlServer1_password": {
+						"value": "[parameters('SqlServer1_password')]"
+					},
 					"SqlServerLS_connectionString": {
 						"value": "[parameters('SqlServerLS_connectionString')]"
 					},
 					"SqlServerLS_password": {
 						"value": "[parameters('SqlServerLS_password')]"
+					},
+					"OnPremiseDBLS_properties_typeProperties_userName": {
+						"value": "[parameters('OnPremiseDBLS_properties_typeProperties_userName')]"
+					},
+					"SqlServer1_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
 					},
 					"SqlServerLS_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServerLS_properties_typeProperties_userName')]"

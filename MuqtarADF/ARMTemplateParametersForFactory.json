@@ -47,6 +47,12 @@
 		"AzureADLGen1LS_servicePrincipalKey": {
 			"value": ""
 		},
+		"SQLConditionalFileSeperatorLS_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorageCSV_connectionString": {
+			"value": ""
+		},
 		"OnPremiseDBLS_properties_typeProperties_userName": {
 			"value": "mohammed's"
 		},

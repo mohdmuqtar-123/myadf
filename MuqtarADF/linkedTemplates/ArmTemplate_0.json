@@ -39,21 +39,13 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'servicePrincipalKey' of 'AzureADLGen1LS'"
 		},
-		"OnPremiseDBLS_connectionString": {
+		"SQLConditionalFileSeperatorLS_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'OnPremiseDBLS'"
+			"metadata": "Secure string for 'connectionString' of 'SQLConditionalFileSeperatorLS'"
 		},
-		"OnPremiseDBLS_password": {
+		"AzureBlobStorageCSV_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'OnPremiseDBLS'"
-		},
-		"SqlServer1_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
-		},
-		"SqlServer1_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'SqlServer1'"
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageCSV'"
 		},
 		"AzureADLGen1LS_properties_typeProperties_dataLakeStoreUri": {
 			"type": "string",
@@ -74,14 +66,6 @@
 		"AzureADLGen1LS_properties_typeProperties_resourceGroupName": {
 			"type": "string",
 			"defaultValue": "MuqtarRG"
-		},
-		"OnPremiseDBLS_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "mohammed's"
-		},
-		"SqlServer1_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "mohammed's"
 		}
 	},
 	"variables": {
@@ -206,6 +190,32 @@
 					"tenant": "[parameters('AzureADLGen1LS_properties_typeProperties_tenant')]",
 					"subscriptionId": "[parameters('AzureADLGen1LS_properties_typeProperties_subscriptionId')]",
 					"resourceGroupName": "[parameters('AzureADLGen1LS_properties_typeProperties_resourceGroupName')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SQLConditionalFileSeperatorLS')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureSqlDatabase",
+				"typeProperties": {
+					"connectionString": "[parameters('SQLConditionalFileSeperatorLS_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorageCSV')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorageCSV_connectionString')]"
 				}
 			},
 			"dependsOn": []
@@ -659,54 +669,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorageLS')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/OnPremiseDBLS')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"connectionString": "[parameters('OnPremiseDBLS_connectionString')]",
-					"userName": "[parameters('OnPremiseDBLS_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('OnPremiseDBLS_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "integrationRuntime",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SqlServer1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"connectionString": "[parameters('SqlServer1_connectionString')]",
-					"userName": "[parameters('SqlServer1_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('SqlServer1_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "integrationRuntime",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime')]"
 			]
 		}
 	]
