@@ -32,6 +32,12 @@
 		"SqlServerLS_password": {
 			"value": ""
 		},
+		"AzureSampleDBProductTableLS_connectionString": {
+			"value": ""
+		},
+		"AzureDempDBDimProduct_connectionString": {
+			"value": ""
+		},
 		"SqlServer1_properties_typeProperties_userName": {
 			"value": "mohammed's"
 		},
