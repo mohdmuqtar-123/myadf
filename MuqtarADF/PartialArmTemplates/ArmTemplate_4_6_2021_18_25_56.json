@@ -1,0 +1,37 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "MuqtarADF"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureADLGen1LS')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDataLakeStore",
+				"typeProperties": {
+					"dataLakeStoreUri": "https://muqtaradlgen1.azuredatalakestore.net/webhdfs/v1",
+					"servicePrincipalId": "754a8cb5-c7ae-4ad2-89b9-b50cfc9ce919",
+					"servicePrincipalKey": {
+						"type": "SecureString",
+						"value": "**********"
+					},
+					"tenant": "3decfc18-2cba-41dd-b672-e4521c51eb4d",
+					"subscriptionId": "c9ae7185-bbdf-4646-b5a6-475dbb540912",
+					"resourceGroupName": "MuqtarRG"
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
