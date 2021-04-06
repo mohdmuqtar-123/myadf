@@ -48,7 +48,13 @@
 							"inputs": [
 								{
 									"referenceName": "onPremiseSqlDS",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"TableName": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
