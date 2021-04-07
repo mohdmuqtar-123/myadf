@@ -5,6 +5,10 @@
 			"ServerName": {
 				"type": "string",
 				"value": "DESKTOP-T9ST1LP\\MUQTAR"
+			},
+			"DatabaseName": {
+				"type": "string",
+				"value": "SampleDW"
 			}
 		}
 	},
