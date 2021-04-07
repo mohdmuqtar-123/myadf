@@ -9,6 +9,10 @@
 			"DatabaseName": {
 				"type": "string",
 				"value": "SampleDW"
+			},
+			"Password": {
+				"type": "int",
+				"value": 40049
 			}
 		}
 	},
