@@ -13,6 +13,10 @@
 			"Password": {
 				"type": "int",
 				"value": 40049
+			},
+			"username": {
+				"type": "string",
+				"value": "mohammed's"
 			}
 		}
 	},
