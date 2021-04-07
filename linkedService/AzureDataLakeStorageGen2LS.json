@@ -1,0 +1,15 @@
+{
+	"name": "AzureDataLakeStorageGen2LS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://muqtargen2.dfs.core.windows.net",
+			"tenant": "3decfc18-2cba-41dd-b672-e4521c51eb4d",
+			"servicePrincipalId": "754a8cb5-c7ae-4ad2-89b9-b50cfc9ce919",
+			"servicePrincipalCredentialType": "ServicePrincipalKey",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIk1VUVRBUkFERl9iODlhNWQ2NS03ZGY2LTRiZmMtOWRlNC0xZTAzYzBhZDRiMzQiDQp9"
+		}
+	}
+}
