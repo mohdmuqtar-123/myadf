@@ -576,7 +576,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "SalesPersonTotalSales"
+					"table": "SalesPersonTotal"
 				}
 			},
 			"dependsOn": []

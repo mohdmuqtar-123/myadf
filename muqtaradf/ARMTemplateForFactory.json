@@ -2076,7 +2076,8 @@
 								"partitionOption": "None"
 							},
 							"sink": {
-								"type": "AzureSqlSink"
+								"type": "AzureSqlSink",
+								"tableOption": "autoCreate"
 							},
 							"enableStaging": false,
 							"translator": {
@@ -2315,7 +2316,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "SalesPersonTotalSales"
+					"table": "SalesPersonTotal"
 				}
 			},
 			"dependsOn": [
