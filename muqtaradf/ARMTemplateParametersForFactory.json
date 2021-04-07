@@ -62,6 +62,15 @@
 		"AzureDataLakeStorageGen2LS_servicePrincipalCredential": {
 			"value": ""
 		},
+		"SalesTotalSourceLS_connectionString": {
+			"value": ""
+		},
+		"SalesTotalSourceLS_password": {
+			"value": ""
+		},
+		"AzureSALESDemoDBLS_connectionString": {
+			"value": ""
+		},
 		"AzureADLGen1LS_properties_typeProperties_dataLakeStoreUri": {
 			"value": "https://muqtaradlgen1.azuredatalakestore.net/webhdfs/v1"
 		},
@@ -97,6 +106,9 @@
 		},
 		"AzureDataLakeStorageGen2LS_properties_typeProperties_servicePrincipalId": {
 			"value": "754a8cb5-c7ae-4ad2-89b9-b50cfc9ce919"
+		},
+		"SalesTotalSourceLS_properties_typeProperties_userName": {
+			"value": "mohammed's"
 		}
 	}
 }

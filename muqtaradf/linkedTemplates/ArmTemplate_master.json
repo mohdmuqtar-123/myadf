@@ -83,6 +83,18 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'servicePrincipalCredential' of 'AzureDataLakeStorageGen2LS'"
 		},
+		"SalesTotalSourceLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SalesTotalSourceLS'"
+		},
+		"SalesTotalSourceLS_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SalesTotalSourceLS'"
+		},
+		"AzureSALESDemoDBLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSALESDemoDBLS'"
+		},
 		"AzureADLGen1LS_properties_typeProperties_dataLakeStoreUri": {
 			"type": "string",
 			"defaultValue": "https://muqtaradlgen1.azuredatalakestore.net/webhdfs/v1"
@@ -130,6 +142,10 @@
 		"AzureDataLakeStorageGen2LS_properties_typeProperties_servicePrincipalId": {
 			"type": "string",
 			"defaultValue": "754a8cb5-c7ae-4ad2-89b9-b50cfc9ce919"
+		},
+		"SalesTotalSourceLS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "mohammed's"
 		},
 		"containerUri": {
 			"type": "string",
@@ -209,6 +225,9 @@
 					"AzureDataLakeStorageGen2LS_servicePrincipalCredential": {
 						"value": "[parameters('AzureDataLakeStorageGen2LS_servicePrincipalCredential')]"
 					},
+					"AzureSALESDemoDBLS_connectionString": {
+						"value": "[parameters('AzureSALESDemoDBLS_connectionString')]"
+					},
 					"AzureADLGen1LS_properties_typeProperties_dataLakeStoreUri": {
 						"value": "[parameters('AzureADLGen1LS_properties_typeProperties_dataLakeStoreUri')]"
 					},
@@ -266,8 +285,17 @@
 					"OnPremiseSQLServerQ4LS_password": {
 						"value": "[parameters('OnPremiseSQLServerQ4LS_password')]"
 					},
+					"SalesTotalSourceLS_connectionString": {
+						"value": "[parameters('SalesTotalSourceLS_connectionString')]"
+					},
+					"SalesTotalSourceLS_password": {
+						"value": "[parameters('SalesTotalSourceLS_password')]"
+					},
 					"OnPremiseSQLServerQ4LS_properties_typeProperties_userName": {
 						"value": "[parameters('OnPremiseSQLServerQ4LS_properties_typeProperties_userName')]"
+					},
+					"SalesTotalSourceLS_properties_typeProperties_userName": {
+						"value": "[parameters('SalesTotalSourceLS_properties_typeProperties_userName')]"
 					}
 				}
 			},
