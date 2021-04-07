@@ -1,5 +1,13 @@
 {
 	"name": "muqtaradf",
+	"properties": {
+		"globalParameters": {
+			"ServerName": {
+				"type": "string",
+				"value": "DESKTOP-T9ST1LP\\MUQTAR"
+			}
+		}
+	},
 	"location": "westeurope",
 	"identity": {
 		"type": "SystemAssigned",
