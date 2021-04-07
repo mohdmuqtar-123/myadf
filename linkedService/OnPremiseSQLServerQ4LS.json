@@ -1,0 +1,17 @@
+{
+	"name": "OnPremiseSQLServerQ4LS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=DESKTOP-T9ST1LP\\MUQTAR;initial catalog=SampleDW",
+			"userName": "mohammed's",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkMzQ5ZTU1Yy1jNDZlLTRlODItYjA0Ny01YWI3MmNiNDc5ZGQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
