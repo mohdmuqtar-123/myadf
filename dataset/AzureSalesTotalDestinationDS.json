@@ -1,0 +1,16 @@
+{
+	"name": "AzureSalesTotalDestinationDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSALESDemoDBLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "SalesPersonTotalSales"
+		}
+	}
+}
