@@ -1,0 +1,102 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "muqtaradf"
+		},
+		"AzureADLGen1LS_servicePrincipalKey": {
+			"value": ""
+		},
+		"AzureBlobStorageCSV_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorageLS_connectionString": {
+			"value": ""
+		},
+		"AzureDemoDBLSNew_connectionString": {
+			"value": ""
+		},
+		"AzureDempDBDimProduct_connectionString": {
+			"value": ""
+		},
+		"AzureSampleDBProductTableLS_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLSNew_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDemoDBL_connectionString": {
+			"value": ""
+		},
+		"OnPremiseDBLS_connectionString": {
+			"value": ""
+		},
+		"OnPremiseDBLS_password": {
+			"value": ""
+		},
+		"SQLConditionalFileSeperatorLS_connectionString": {
+			"value": ""
+		},
+		"SqlServer1_connectionString": {
+			"value": ""
+		},
+		"SqlServer1_password": {
+			"value": ""
+		},
+		"SqlServerLS_connectionString": {
+			"value": ""
+		},
+		"SqlServerLS_password": {
+			"value": ""
+		},
+		"OnPremiseSQLServerQ4LS_connectionString": {
+			"value": ""
+		},
+		"OnPremiseSQLServerQ4LS_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorageGen2LS_servicePrincipalCredential": {
+			"value": ""
+		},
+		"AzureADLGen1LS_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://muqtaradlgen1.azuredatalakestore.net/webhdfs/v1"
+		},
+		"AzureADLGen1LS_properties_typeProperties_servicePrincipalId": {
+			"value": "754a8cb5-c7ae-4ad2-89b9-b50cfc9ce919"
+		},
+		"AzureADLGen1LS_properties_typeProperties_tenant": {
+			"value": "3decfc18-2cba-41dd-b672-e4521c51eb4d"
+		},
+		"AzureADLGen1LS_properties_typeProperties_subscriptionId": {
+			"value": "c9ae7185-bbdf-4646-b5a6-475dbb540912"
+		},
+		"AzureADLGen1LS_properties_typeProperties_resourceGroupName": {
+			"value": "MuqtarRG"
+		},
+		"OnPremiseDBLS_properties_typeProperties_userName": {
+			"value": "mohammed's"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "mohammed's"
+		},
+		"SqlServerLS_properties_typeProperties_userName": {
+			"value": "mohammed's"
+		},
+		"OnPremiseSQLServerQ4LS_properties_typeProperties_userName": {
+			"value": "mohammed's"
+		},
+		"AzureDataLakeStorageGen2LS_properties_typeProperties_url": {
+			"value": "https://muqtargen2.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorageGen2LS_properties_typeProperties_tenant": {
+			"value": "3decfc18-2cba-41dd-b672-e4521c51eb4d"
+		},
+		"AzureDataLakeStorageGen2LS_properties_typeProperties_servicePrincipalId": {
+			"value": "754a8cb5-c7ae-4ad2-89b9-b50cfc9ce919"
+		}
+	}
+}
